@@ -7,8 +7,8 @@ import createHistory from "history/createBrowserHistory"
 import { routerMiddleware } from "react-router-redux"
 
 import mutation from "./mutate/reducers"
-import sessionReducer from '../reducers/session';
-import userReducer from '../reducers/user';
+import sessionReducer from '../modules/auth/session';
+import userReducer from '../modules/auth/user';
 
 
 
