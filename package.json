@@ -20,12 +20,47 @@
     "react-router-redux": "^5.0.0-alpha.9",
     "redux-promise-middleware": "^4.4.1",
     "redux-thunk": "^2.2.0",
-    "redux-actions": "^2.2.1"
+    "redux-actions": "^2.2.1",
+    "react-md": "^1.2.8"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build:js": "react-scripts build && node src/utils/serviceWorkerIgnoreLegacyUri.js",
+    "build": "npm-run-all build-css build:js && npm run delete-maps",
+    "test": "npm run build-css && react-scripts test --env=jsdom",
+    "test:js": "react-scripts test --env=jsdom",
+    "test:ci": "npm run test -- --ci --coverage --watch=0 ",
+    "eject": "react-scripts eject",
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "flow": "flow",
+    "lint": "eslint ./src",
+    "precommit": "lint-staged",
+    "prepush": "npm-run-all lint test:ci"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "eslintIgnore": [
+    "flow-typed",
+    "build",
+    "coverage",
+    "public"
+  ],
+  "devDependencies": {
+    "cookies-js": "^1.2.3",
+    "eslint": "^4.6.1",
+    "eslint-config-prettier": "^2.4.0",
+    "eslint-plugin-prettier": "^2.2.0",
+    "flow-bin": "^0.54.1",
+    "lint-staged": "^4.1.3",
+    "node-sass-chokidar": "^0.0.3",
+    "npm-run-all": "^4.1.1",
+    "prettier": "^1.6.1",
+    "react-scripts": "1.0.13"
   }
 }

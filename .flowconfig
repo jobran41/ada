@@ -1,0 +1,9 @@
+[ignore]
+.*/node_modules/react-flip-move/.*
+.*/node_modules/styled-components/.*
+
+[include]
+
+[libs]
+
+[options]
