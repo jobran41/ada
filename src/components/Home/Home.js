@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { compose } from 'recompose';
+import { withRouter } from 'react-router-dom';
 
 import withAuthorization from '../Session/withAuthorization';
 import { db } from '../../firebase';
 
 import './index.css'
 
+@withRouter
 class HomePage extends Component {
   componentDidMount() {
     const { onSetUsers } = this.props;

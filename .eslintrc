@@ -13,7 +13,7 @@
       "sourceType": "module",
       "ecmaFeatures": {
         "jsx": true,
-        "experimentalDecorators": true
+        "experimentalDecorators": false
       }
     },
     "env": {

@@ -4,6 +4,7 @@ import {
   Route,
 } from 'react-router-dom';
 import {connect} from 'react-redux'
+import { withRouter } from 'react-router-dom';
 
 import Navigation from '../Navigation';
 import LandingPage from '../Landing';
@@ -16,6 +17,7 @@ import withAuthentication from '../Session/withAuthentication';
 import * as routes from '../../constants/routes';
 
 import './index.css';
+
 
 const App = () =>
   <Router>

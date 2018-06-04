@@ -1,20 +1,8 @@
-  {
-    "compilerOptions": {
-      "baseUrl": "./src/*",
-      "jsx": "react",
-      "paths": {
-        "*": [
-          "src/*"
-        ],
-        "test/*": [
-          "test/*"
-        ],
-        "underscore": [
-          "lodash"
-        ]
-      },
-      "allowSyntheticDefaultImports": true,
-      "experimentalDecorators": true,
-      "target": "es5",
-    }
+{
+  "exclude": ["node_modules", "dist"],
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "jsx": "react",
+    "experimentalDecorators": true
   }
+}
