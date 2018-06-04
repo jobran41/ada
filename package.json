@@ -52,9 +52,11 @@
     "public"
   ],
   "devDependencies": {
+    "babel-eslint": "^8.2.3",
     "cookies-js": "^1.2.3",
-    "eslint": "^4.6.1",
+    "eslint": "^4.19.1",
     "eslint-config-prettier": "^2.4.0",
+    "eslint-plugin-flowtype": "^2.49.3",
     "eslint-plugin-prettier": "^2.2.0",
     "flow-bin": "^0.54.1",
     "lint-staged": "^4.1.3",

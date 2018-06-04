@@ -16,6 +16,8 @@ import * as routes from '../../constants/routes';
 
 import './index.css';
 
+
+
 const App = () =>
   <Router>
     <div className="app">
@@ -29,4 +31,6 @@ const App = () =>
     </div>
   </Router>
 
+
+console.log(mutate(App))
 export default withAuthentication(App);

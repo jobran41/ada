@@ -6,6 +6,7 @@ import { PasswordForgetLink } from '../PasswordForget';
 import { auth } from '../../firebase';
 import * as routes from '../../constants/routes';
 
+
 const SignInPage = ({ history }) =>
   <div>
     <h1>SignIn</h1>
@@ -59,11 +60,12 @@ class SignInForm extends Component {
       password,
       error,
     } = this.state;
-
+    console.log('jooooo singcc')
     const isInvalid =
       password === '' ||
       email === '';
 
+    console.log('oooooo')
     return (
       <form onSubmit={this.onSubmit}>
         <input
@@ -82,7 +84,7 @@ class SignInForm extends Component {
           Sign In
         </button>
 
-        { error && <p>{error.message}</p> }
+        {error && <p>{error.message}</p>}
       </form>
     );
   }
