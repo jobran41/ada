@@ -6,9 +6,9 @@ import { createLogger } from "redux-logger" // we need to fix this plugin only f
 import createHistory from "history/createBrowserHistory"
 import { routerMiddleware } from "react-router-redux"
 
-import mutation from "./mutate/reducers"
-import sessionReducer from '../modules/auth/session';
-import userReducer from '../modules/auth/user';
+import mutation from "modules/mutate/reducers"
+import sessionReducer from 'modules/auth/session';
+import userReducer from 'modules/auth/user';
 
 
 

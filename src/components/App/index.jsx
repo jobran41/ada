@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Route,
 } from 'react-router-dom';
+import {connect} from 'react-redux'
 
 import Navigation from '../Navigation';
 import LandingPage from '../Landing';
@@ -15,8 +16,6 @@ import withAuthentication from '../Session/withAuthentication';
 import * as routes from '../../constants/routes';
 
 import './index.css';
-
-
 
 const App = () =>
   <Router>
@@ -32,5 +31,4 @@ const App = () =>
   </Router>
 
 
-console.log(mutate(App))
 export default withAuthentication(App);

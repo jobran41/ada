@@ -1,11 +1,20 @@
-{
-    "exclude": [
-      "node_modules",
-      "dist"
-    ],
+  {
     "compilerOptions": {
-      "baseUrl": "./src",
+      "baseUrl": "./src/*",
       "jsx": "react",
-      "experimentalDecorators": true
+      "paths": {
+        "*": [
+          "src/*"
+        ],
+        "test/*": [
+          "test/*"
+        ],
+        "underscore": [
+          "lodash"
+        ]
+      },
+      "allowSyntheticDefaultImports": true,
+      "experimentalDecorators": true,
+      "target": "es5",
     }
   }
