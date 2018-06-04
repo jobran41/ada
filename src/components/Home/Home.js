@@ -8,7 +8,7 @@ import { db } from '../../firebase';
 
 import './index.css'
 
-@withRouter
+//@withRouter
 class HomePage extends Component {
   componentDidMount() {
     const { onSetUsers } = this.props;
